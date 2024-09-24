@@ -13,6 +13,7 @@ ul,ol,li {
 a {
 	text-decoration: none;
 }
+/* 전체 풀 스크린 레이아웃 */
 .wrap {
 	width : 100%;
 	height : 100vh ;
@@ -25,11 +26,7 @@ a {
 태그의 꾸밈 효과등을없애서 CSS를초기화한뒤 .wrap에 너비와높이를각각 100%, 100vh로
 지정해 풀 스크린으로 만들고 배경색에 그러데이션 색상을 지정합니다. */
 
-
-
-
-
-
+/* 제목 */
 .wrap h1 {
   font-weight: normal;
   font-size: 24px;
@@ -40,19 +37,18 @@ a {
   left: 50px; /* '50 px'에서 공백 제거 */
   top: 70px;  /* '70 px'에서 공백 제거 */
 }
-
 .wrap h1 span {
   opacity: 0.8;
 }
 
-.wrap.auto {
+/* 자동 재생 버튼 */
+.wrap .auto {
   position: absolute;
   bottom: 60px;
   left: 60px; /* '60 px'에서 공백 제거 */
   z-index: 20;
 }
-
-.wrap.auto li {
+.wrap .auto li {
   float: left;
   margin-right: 20px; /* '20 px'에서 공백 제거 */
   cursor: pointer;
@@ -62,7 +58,7 @@ a {
   transition: all 0.5s;
 }
 
-.wrap.auto li:hover { /* 마우스 호버 시 진해지면서 1.4 배 확대 */
+.wrap .auto li:hover { /* 마우스 호버 시 진해지면서 1.4 배 확대 */
   opacity: 1;
   transform: scale(1.4); /* 'seale' -> 'scale', 오타 수정 */
 }
@@ -84,25 +80,26 @@ Swiper 플러그인은 2단계에서 <head> 부분에 전용 CSS 파일을 연�
 여기서 지정한 클래스이름을통해 기본적인 레이아웃이 자동생성됩니다.그러므로위의 클래스이름을반드시 지켜서 사용해야합니다.
 */
 
+/* 기본 슬라이드 프레임 */
 .wrap .swiper-wrapper {
   width : 100%;
   height : 100%;
   }
   .wrap .swiper-wrapper .swiper-slide {
   width : 500px;
-  height : 500 px;
+  height : 500px;
   position : relative;
   top : 50%;
-  margin-top : -230 px;
+  margin-top : -230px;
   }
-  .wrap .swiper-wrapper .swiper-slide .inner {
+  .wrap. swiper-wrapper .swiper-slide .inner {
   width : 100%;
   height : 100%;
   background : #fff;
-  padding : 30 px;
+  padding : 30px;
   box-sizing : border-box;
   opacity: 0.4;
-  transition : l s;
+  transition : 1s;
   }
   /* 
   .wrap .swiper-wrapper의 너비와 높이 모두 100距김 지정하고, 
@@ -115,3 +112,4 @@ Swiper 플러그인은 2단계에서 <head> 부분에 전용 CSS 파일을 연�
 
   플러그인의 호출 구문을 확인하기 위해 다시 플러그인 사이트로 이동해서 [Get Started] 메뉴에 서 [Initialize Swiper] 아래 의 호출 구문을 복사합니 다.
   */
+

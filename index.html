@@ -7,22 +7,25 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>스와이프 갤러리</title>
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/d7ead230b2.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
 	<div class="wrap"> <!--<body>태그 안에 클래스 이름이 wrap 인 <div> 태그를생성-->
 		<!-- 제목과자동재생,정지버튼만들기 -->
-		<h1>UI/UX <span>PORTFOLIO</span></h1>
+		<h1>UI/UX
+			<span>PORTFOLIO</span>
+		</h1>
 		<ul class="auto">
 			<li class="btnStart"><i class="fas fa-play"></i></li>
 			<li class="btnStop"><i class="fas fa-pause"></i></li>
 		</ul>
-
-		<!-- 
+	</div>
+	<!-- 
 	<div class="swiper-wrapper" ＞로 프레 임을 생성하고 
 	자식 요소로 <div class="swiperslide"＞를 5 개 만듭니다. 
 	다시 내부 콘텐츠를 묶어 줄 <div class="inner">로 자식 요소를 넣겠습니다. 
@@ -32,41 +35,45 @@
 	<div class="swiper-pagination">를 입력합니다.
 	-->
 
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<div class="inner"></div>
-			</div>
-			<div class="swiper-slide">
-				<div class="inner"></div>
-			</div>
-			<div class="swiper-slide">
-				<div class="inner"></div>
-			</div>
-			<div class="swiper-slide">
-				<div class="inner"></div>
-			</div>
-			<div class="swiper-slide">
-				<div class="inner"></div>
-			</div>
+	<div class="swiper-wrapper">
+		<div class="swiper-slide">
+			<div class="inner"></div>
 		</div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-pagination"></div>
-
-
+		<div class="swiper-slide">
+			<div class="inner"></div>
+		</div>
+		<div class="swiper-slide">
+			<div class="inner"></div>
+		</div>
+		<div class="swiper-slide">
+			<div class="inner"></div>
+		</div>
+		<div class="swiper-slide">
+			<div class="inner"></div>
+		</div>
 	</div>
+
+	<!-- 좌우버튼 -->
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+
+	<!-- 페이징 버튼 -->
+	<div class="swiper-pagination"></div>
+	</div>
+
+
 	<script>
-		const swiper = new Swiper('.wrap'{ // 프레임으 | 요소명
-			direction: "horizontal", //스와이프 방향
-			loop: true, //순환 여부
+		const swiper = new Swiper('.wrap', { // Swiper 컨테이너 요소명
+			direction: "horizontal", // 스와이프 방향
+			loop: true, // 순환 여부
 			pagination: {
-				el: '.swiper-pagination' //페이지 메뉴 요소명
+				el: '.swiper-pagination' // 페이지 메뉴 요소명
 			},
 			navigation: {
-				nextEl: '.swiper-button-next ', //다음 버튼 요소명
-				prevEl: '.swiper-button-prev', //이전 버튼 요소명
+				nextEl: '.swiper-button-next', // 다음 버튼 요소명
+				prevEl: '.swiper-button-prev', // 이전 버튼 요소명
 			},
-			spaceBetween: 50 | I1패널 사이의 간격을 50px로 설정
+			spaceBetween: 50 // 패널 사이의 간격을 50px로 설정
 		});
 	</script>
 

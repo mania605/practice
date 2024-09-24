@@ -66,3 +66,52 @@ a {
   opacity: 1;
   transform: scale(1.4); /* 'seale' -> 'scale', 오타 수정 */
 }
+
+
+/* hl 요소를선택해서 웹 폰트 orbitron을지정하고크기와색상을설정합니다. 
+이후 absolute를이용해화면왼쪽상단부분에 위치시킵니다. 
+hl의 자식인 span 요소의 투명도를 0.8로설정해 약간투명하게 만듭니다. 
+이제 자동슬라이딩 버튼인 ul.auto는
+화면 왼쪽하단에 마찬가지로 absolute를 이용해 배치하고, 
+각 li를 좌우에 배치한 뒤 크기와 색상을 입력합니다.
+이때 :hover 문을이용하여 transform: scale(l.4) 로약간확대되도록만들고,원본인 li 요소에 transition을 적용해 전환 효과를 설정합니다.
+*/
+
+
+
+/*
+Swiper 플러그인은 2단계에서 <head> 부분에 전용 CSS 파일을 연결했듯이 
+여기서 지정한 클래스이름을통해 기본적인 레이아웃이 자동생성됩니다.그러므로위의 클래스이름을반드시 지켜서 사용해야합니다.
+*/
+
+.wrap .swiper-wrapper {
+  width : 100%;
+  height : 100%;
+  }
+  .wrap .swiper-wrapper .swiper-slide {
+  width : 500px;
+  height : 500 px;
+  position : relative;
+  top : 50%;
+  margin-top : -230 px;
+  }
+  .wrap .swiper-wrapper .swiper-slide .inner {
+  width : 100%;
+  height : 100%;
+  background : #fff;
+  padding : 30 px;
+  box-sizing : border-box;
+  opacity: 0.4;
+  transition : l s;
+  }
+  /* 
+  .wrap .swiper-wrapper의 너비와 높이 모두 100距김 지정하고, 
+  각 슬라이드 패널로 사용할 .swiper-slide는 500px로 지정합니다. 
+  그리고 위치는 세로 중앙에서 살짝 아래로 내려가도록 
+  position: relative를 적용하고 top을 50%, margin-top을 -230px로 선정합니다. 
+  자식인 .inner는 부모인 .swiper-slide의 크기를 100%로 적용받고 배경색을 흰색으로 지정합니다.
+  그리고 box-sizing: border-box를 적용한 뒤 반투명하게 설정합니다. 마지막으로 transition을 1 초로적용해서 앞으로슬라이드될 때 약간의 사용자정의 모션을추가하겠습니다.
+  플러그인이 연결이 되어야자바스크립트가나머지 레이아웃을잡아주므로다시 index.html  파일로돌아가서 하단부분에 Swiper 플러그인의 호출구문을연결하겠습니다.
+
+  플러그인의 호출 구문을 확인하기 위해 다시 플러그인 사이트로 이동해서 [Get Started] 메뉴에 서 [Initialize Swiper] 아래 의 호출 구문을 복사합니 다.
+  */

@@ -21,7 +21,55 @@
 			<li class="btnStart"><i class="fas fa-play"></i></li>
 			<li class="btnStop"><i class="fas fa-pause"></i></li>
 		</ul>
+
+		<!-- 
+	<div class="swiper-wrapper" ＞로 프레 임을 생성하고 
+	자식 요소로 <div class="swiperslide"＞를 5 개 만듭니다. 
+	다시 내부 콘텐츠를 묶어 줄 <div class="inner">로 자식 요소를 넣겠습니다. 
+	그 다음에는 좌우 버튼이 들어갈 <div class="swiper-button-next" ＞와 
+	<div class="swiper-button-prev" ＞를 생성합니다.
+	마지막으로 현재 활성화된 페이지의 번호를 확인할 수 있는 
+	<div class="swiper-pagination">를 입력합니다.
+	-->
+
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-pagination"></div>
+
+
 	</div>
+	<script>
+		const swiper = new Swiper('.wrap'{ // 프레임으 | 요소명
+			direction: "horizontal", //스와이프 방향
+			loop: true, //순환 여부
+			pagination: {
+				el: '.swiper-pagination' //페이지 메뉴 요소명
+			},
+			navigation: {
+				nextEl: '.swiper-button-next ', //다음 버튼 요소명
+				prevEl: '.swiper-button-prev', //이전 버튼 요소명
+			},
+			spaceBetween: 50 | I1패널 사이의 간격을 50px로 설정
+		});
+	</script>
+
 </body>
 
 </html>

@@ -24,8 +24,8 @@
 			<li class="btnStart"><i class="fas fa-play"></i></li>
 			<li class="btnStop"><i class="fas fa-pause"></i></li>
 		</ul>
-	</div>
-	<!-- 
+
+		<!-- 
 	<div class="swiper-wrapper" ＞로 프레 임을 생성하고 
 	자식 요소로 <div class="swiperslide"＞를 5 개 만듭니다. 
 	다시 내부 콘텐츠를 묶어 줄 <div class="inner">로 자식 요소를 넣겠습니다. 
@@ -35,48 +35,50 @@
 	<div class="swiper-pagination">를 입력합니다.
 	-->
 
-	<div class="swiper-wrapper">
-		<div class="swiper-slide">
-			<div class="inner"></div>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
 		</div>
-		<div class="swiper-slide">
-			<div class="inner"></div>
-		</div>
-		<div class="swiper-slide">
-			<div class="inner"></div>
-		</div>
-		<div class="swiper-slide">
-			<div class="inner"></div>
-		</div>
-		<div class="swiper-slide">
-			<div class="inner"></div>
-		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-pagination"></div>
+
 	</div>
-
-	<!-- 좌우버튼 -->
-	<div class="swiper-button-next"></div>
-	<div class="swiper-button-prev"></div>
-
-	<!-- 페이징 버튼 -->
-	<div class="swiper-pagination"></div>
-	</div>
-
-
-	<script>
-		const swiper = new Swiper('.wrap', { // Swiper 컨테이너 요소명
-			direction: "horizontal", // 스와이프 방향
-			loop: true, // 순환 여부
-			pagination: {
-				el: '.swiper-pagination' // 페이지 메뉴 요소명
-			},
-			navigation: {
-				nextEl: '.swiper-button-next', // 다음 버튼 요소명
-				prevEl: '.swiper-button-prev', // 이전 버튼 요소명
-			},
-			spaceBetween: 50 // 패널 사이의 간격을 50px로 설정
-		});
-	</script>
 
 </body>
+
+
+<script>
+	const swiper = new Swiper('.wrap', { // Swiper 컨테이너 요소명
+		direction: "horizontal", // 스와이프 방향
+		loop: true, // 순환 여부
+		pagination: {
+			el: '.swiper-pagination' // 페이지 메뉴 요소명
+			type: 'fraction' //페이지 버튼 대신 슬라이더 번호 출력
+		},
+		navigation: {
+			nextEl: '.swiper-button-next', // 다음 버튼 요소명
+			prevEl: '.swiper-button-prev', // 이전 버튼 요소명
+		},
+		spaceBetween: 50, // 패널 사이의 간격을 50px로 설정
+		sliderPerView: "auto", //css에 지정한 슬러이더의 크기 반영
+		grabCursor: true,  //스와이프 시 마우스 포인터 모양 변경
+		conteredSlides: true, //슬라이더 패널을 항상 가운데로 정렬
+		speed: 1000						//슬라이더 이동 속도 지정
+	});
+</script>
 
 </html>

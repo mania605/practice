@@ -7,19 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>스와이프 갤러리</title>
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/d7ead230b2.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
 	<div class="wrap"> <!--<body>태그 안에 클래스 이름이 wrap 인 <div> 태그를생성-->
 		<!-- 제목과자동재생,정지버튼만들기 -->
-		<h1>UI/UX
-			<span>PORTFOLIO</span>
-		</h1>
+		<h1>UI/UX <span>PORTFOLIO</span> </h1>
 		<ul class="auto">
 			<li class="btnStart"><i class="fas fa-play"></i></li>
 			<li class="btnStop"><i class="fas fa-pause"></i></li>
@@ -37,32 +35,66 @@
 
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-				<div class="inner"></div>
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic1.png">
+						<h2>Ipsum dolor sit amet.</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, optio.</p>
+					</div>
+				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="inner"></div>
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic2.png">
+						<h2>Lorem ipsum dolor.</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eum doloribus voluptate officiis
+							excepturi!</p>
+					</div>
+				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="inner"></div>
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic3.png">
+						<h2>Dolor ipsum sit.</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi officiis iste nam quae.</p>
+					</div>
+				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="inner"></div>
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic4.png">
+						<h2>Consectetur adicing.</h2>
+						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit optio debitis sapiente!</p>
+					</div>
+				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="inner"></div>
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic5.png">
+						<h2>Dicta! elit. </h2>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, accusantium corrupti.</p>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="swiper-button-next"></div>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-pagination"></div>
 
-	</div>
+
+			<!-- 좌우버튼 -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+
+			<!-- 페이징 버튼 -->
+			<div class="swiper-pagination"></div>
+		</div>
 
 </body>
 
 
 <script>
-	const swiper = new Swiper('.wrap', { // Swiper 컨테이너 요소명
+	const swiper = new Swiper(".wrap", { // Swiper 컨테이너 요소명
 		direction: "horizontal", // 스와이프 방향
 		loop: true, // 순환 여부
 		pagination: {
@@ -73,12 +105,22 @@
 			nextEl: '.swiper-button-next', // 다음 버튼 요소명
 			prevEl: '.swiper-button-prev', // 이전 버튼 요소명
 		},
-		spaceBetween: 50, // 패널 사이의 간격을 50px로 설정
+		spaceBetween: 0, // 패널 사이의 간격을 50px로 설정
 		sliderPerView: "auto", //css에 지정한 슬러이더의 크기 반영
 		grabCursor: true,  //스와이프 시 마우스 포인터 모양 변경
 		conteredSlides: true, //슬라이더 패널을 항상 가운데로 정렬
 		speed: 1000						//슬라이더 이동 속도 지정
+
+	effect: "coverflow"
+	coverflowEffect: {
+			rotate: 50,
+			stretch: -100,
+			depth: 400,
+			modifier: 1,
+			slideShadows: false,
+		}
 	});
+
 </script>
 
 </html>

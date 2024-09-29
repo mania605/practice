@@ -30,10 +30,10 @@ a {
 .wrap h1 {
   font-weight: normal;
   font-size: 24px;
-  font-family: "Orbitron";
+  font-family: "orbitron";
   color: #fff;
   letter-spacing: 1px; /* 'px' 단위와 '1' 사이에 공백이 있으면 안 됩니다 */
-  position: absolute;
+  position: absolute; 
   left: 50px; /* '50 px'에서 공백 제거 */
   top: 70px;  /* '70 px'에서 공백 제거 */
 }
@@ -50,7 +50,7 @@ a {
 }
 .wrap .auto li {
   float: left;
-  margin-right: 20px; /* '20 px'에서 공백 제거 */
+  margin-right: 20px; 
   cursor: pointer;
   color: #fff;
   font-size: 20px;
@@ -62,7 +62,6 @@ a {
   transform: scale(1.4); /* 'seale' -> 'scale', 오타 수정 */
 }
 
-
 /* hl 요소를선택해서 웹 폰트 orbitron을지정하고크기와색상을설정합니다. 
 이후 absolute를이용해화면왼쪽상단부분에 위치시킵니다. 
 hl의 자식인 span 요소의 투명도를 0.8로설정해 약간투명하게 만듭니다. 
@@ -70,24 +69,23 @@ hl의 자식인 span 요소의 투명도를 0.8로설정해 약간투명하게 �
 화면 왼쪽하단에 마찬가지로 absolute를 이용해 배치하고, 
 각 li를 좌우에 배치한 뒤 크기와 색상을 입력합니다.
 이때 :hover 문을이용하여 transform: scale(l.4) 로약간확대되도록만들고,원본인 li 요소에 transition을 적용해 전환 효과를 설정합니다.
-
-Swiper 플러그인은 2단계에서 <head> 부분에 전용 CSS 파일을 연결했듯이 
+    Swiper 플러그인은 2단계에서 <head> 부분에 전용 CSS 파일을 연결했듯이 
 여기서 지정한 클래스이름을통해 기본적인 레이아웃이 자동생성됩니다.그러므로위의 클래스이름을반드시 지켜서 사용해야합니다.
 */
 
 /* 기본 슬라이드 프레임 */
-.wrap .swiper-wrapper {
+.swiper-wrapper {
   width : 100%;
   height : 100%;
   }
-  .wrap .swiper-wrapper .swiper-slide {
+.swiper-wrapper .swiper-slide {
   width : 500px;
   height : 500px;
   position : relative;
   top : 50%;
   margin-top : -230px;
   }
-  .wrap .swiper-wrapper .swiper-slide .inner {
+.swiper-wrapper .swiper-slide .inner {
   width : 100%;
   height : 100%;
   background : #fff;
@@ -109,97 +107,7 @@ Swiper 플러그인은 2단계에서 <head> 부분에 전용 CSS 파일을 연�
   */
 
 
-.wrap .swiper-wrapper .swiper-slied-activ .inner { //가운데 패널
-opacity: 1;
-box-shadow: 0px 0px 50px rgba(255,255,255,0.8);
-}
-
-.wrap .swiper-wrapper .swiper-slide .inner::before,
-.wrap .swiper-wrapper .swiper-slide .inner::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0;
-  background: #fff;
-}
-
-  .wrap .swiper-wrapper .swiper-slide-prev .inner,
-  .wrap .swiper-wrapper .swiper-slide-next .inner {
-    opacity: 0.7;
-  }
-
-  @keyframes ani {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    1% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.4);
-    }
-}
-
-.wrap .swiper-wrapper .swiper-slide-active .inner::before {
-    animation: ani 1s ease 1;
-}
-
-.wrap .swiper-wrapper .swiper-slide-active .inner::after {
-    animation: ani 1s ease 0.3s 1;
-}
-
-.wrap .swiper-wrapper .swiper-slide .inner com{
-  position: relative; 
-  /*.inner 안의 가상 요소인 : :before, : :after를 absolute로 배치했으므로 div.con 요소가 가
-  상 요소보다 위쪽으로 올라오도록 relative를 설정, z-index값을 10으로 높게 지정 */
-  z-index: 10;
-}
-/* 이후자식인 이미지는부모의 100%로너빗값을지정하고제목,본문과관련된 서식 스타
-일도 입력합니다. 이때 h2 요소에도 가상 요소 : :after를 만들어서 제목 아래에 얇은 밑줄을
-생성*/
-wrap .swiper-wrapper .swiper-slide .inner .con img{
-  width: 100%;
-}
-
-wrap .swiper-wrapper .swiper-slide .inner .con h2{
-font-weight: normal;
-font-size: 40px;
-font-family: "roboto";
-color: #111;
-margin-top: 15px;
-margin-bottom: 20px;
-}
-
-.wrap .swiper-wrapper .swiper-slide .inner .con h2 ::after {
-  content : "";
-  display : block;
-  width : 30px;
-  height : 1px;
-  background-color: #888;
-  margin-top : 15px;
-  transition : 1s 0.5s;
-}
-
-.wrap .swiper-wrapper .swiper-slide-active .inner .con h2 ::after {
-  width : 100px;
-  }
-
-  .wrap .swiper-wrapper .swiper-slide .inner .con p {
-    font-weight : normal;
-    font-size : 13px;
-    font-family : "arial";
-    line-height : 1.3;
-    color : #aaa;
-    letter-spacing : 1px;
-    }
-
-/* 좌우 버튼과 페이지네이션 스타일 변경하기 */
+  /* 좌우 버튼과 페이지네이션 스타일 변경하기 */
 .wrap .swiper-button-prev {
   left: auto;
   right: 100px;
@@ -218,20 +126,117 @@ margin-bottom: 20px;
   transform : scale(0.5);
 }
 
+
+
+
     /*페이지네이션*/
-.swiper-pagination-fraction {
-  bottom: auto; //기존 값 초기화
-  top: 50px;
-  left: auto; //기존 값 초기화
-  right: 50px;
-  width: auto; //기존 값 초기화
-  font-size: 16px;
-  font-family: "orbitron";
-  letter-spacing: 1px;
-  color: #eee;
+    .swiper-pagination-fraction {
+      bottom: auto; //기존 값 초기화
+      top: 50px;
+      left: auto; //기존 값 초기화
+      right: 50px;
+      width: auto; //기존 값 초기화
+      font-size: 16px;
+      font-family: "orbitron";
+      letter-spacing: 1px;
+      color: #eee;
+    }
+    
+    .swiper-pagination-fraction span:nth-of-type(1) {
+      font-size: 30px;
+      color: #fff;
+    }
+
+    .wrap .swiper-wrapper .swiper-slied-activ .inner { //가운데 패널
+      opacity: 1;
+      box-shadow: 0px 0px 50px rgba(255,255,255,0.8);
+      }
+
+.wrap .swiper-wrapper .swiper-slide .inner::before,
+.wrap .swiper-wrapper .swiper-slide .inner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  background: #fff;
 }
 
-.swiper-pagination-fraction span:nth-of-type(1) {
-  font-size: 30px;
-  color: #fff;
+
+  @keyframes ani {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    1% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+    }
 }
+
+
+
+.wrap .swiper-wrapper .swiper-slide-prev .inner,
+.wrap .swiper-wrapper .swiper-slide-next .inner {
+  opacity: 0.7;
+}
+
+
+.wrap .swiper-wrapper .swiper-slide-active .inner::before {
+    animation: ani 1s ease 1;
+}
+
+.wrap .swiper-wrapper .swiper-slide-active .inner::after {
+    animation: ani 1s ease 0.3s 1;
+}
+
+.wrap .swiper-wrapper .swiper-slide .inner con{
+  position: relative; 
+  /*.inner 안의 가상 요소인 : :before, : :after를 absolute로 배치했으므로 div.con 요소가 가
+  상 요소보다 위쪽으로 올라오도록 relative를 설정, z-index값을 10으로 높게 지정 */
+  z-index: 10;
+}
+/* 이후자식인 이미지는부모의 100%로너빗값을지정하고제목,본문과관련된 서식 스타
+일도 입력합니다. 이때 h2 요소에도 가상 요소 : :after를 만들어서 제목 아래에 얇은 밑줄을
+생성*/
+.swiper-wrapper .swiper-slide .inner .con img{
+  width: 100%;
+}
+
+.swiper-wrapper .swiper-slide .inner .con h2{
+font-weight: normal;
+font-size: 40px;
+font-family: "roboto";
+color: #111;
+margin-top: 15px;
+margin-bottom: 20px;
+}
+
+.wrap .swiper-wrapper .swiper-slide .inner .con h2 ::after {
+  content : "";
+  display : block;
+  width : 30px;
+  height : 1px;
+  background-color: #888;
+  margin-top : 15px;
+  transition : 1s 0.5s;
+}
+
+.swiper-wrapper .swiper-slide-active .inner .con h2 ::after {
+  width : 100px;
+  }
+
+.swiper-wrapper .swiper-slide .inner .con p {
+    font-weight : normal;
+    font-size : 13px;
+    font-family : "arial";
+    line-height : 1.3;
+    color : #aaa;
+    letter-spacing : 1px;
+    }

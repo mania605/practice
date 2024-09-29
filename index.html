@@ -36,6 +36,7 @@
 	-->
 
 		<div class="swiper-wrapper">
+
 			<div class="swiper-slide">
 				<div class="inner">
 					<div class="con">
@@ -106,12 +107,11 @@
 					nextEl: '.swiper-button-next', // 다음 버튼 요소명
 					prevEl: '.swiper-button-prev', // 이전 버튼 요소명
 				},
-				spaceBetween: 50, // 패널 사이의 간격을 50px로 설정
+				spaceBetween: 0, // 패널 사이의 간격을 50px로 설정
 				slidesPerView: "auto", //css에 지정한 슬러이더의 크기 반영
 				grabCursor: true,  //스와이프 시 마우스 포인터 모양 변경
 				centeredSlides: true, //슬라이더 패널을 항상 가운데로 정렬
 				speed: 1000,		//슬라이더 이동 속도 지정
-
 				effect: "coverflow",		//이펙트 효과 지정
 				coverflowEffect: {
 					rotate: 50, 					// 희전 각도 지정
@@ -120,8 +120,26 @@
 					modifier: 1,    			//중첩 정도 지정
 					slideShadows: false, 	//슬라이드의 그림자 생성
 				},
+				autoplay{
+				delay: 1000,
+				disableOnInteraction: true
+			}
 			});
 
+			// .btnStart 요소를 찾아서 btnStart에 저장
+			const btnStart = document.querySelector(".btnStart");
+			// .btnStop 요소를 찾아서 btnStop에 저장
+			const btnStop = document.querySelector(".btnStop");
+
+			//btnStart버튼을 클릭시 자동롤링 시작
+			btnStart.addEventListener("click", () => {
+				swiper.autoplay.start();
+			});
+
+			//btnStart버튼을 클릭시 자동롤링 정지
+			btnStop.addEventListener("click", () => {
+				swiper.autoplay.stop();
+			});
 		</script>
 </body>
 

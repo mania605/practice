@@ -1,13 +1,14 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* 화면 초기화 */
 * {
 	margin: 0px;
 	padding: 0px;
 }
-ul,ol,li {
+ul,
+ol,
+li {
 	list-style: none;
 }
 a {
@@ -15,51 +16,52 @@ a {
 }
 /* 전체 풀 스크린 레이아웃 */
 .wrap {
-	width : 100%;
-	height : 100vh;
+	width: 100%;
+	height: 100vh;
 	overflow: hidden;
-	position : relative;
-	box-sizing : border-box;
-	background : linear-gradient(45deg, #ac8bef, #2ddbdc);
+	position: relative;
+	box-sizing: border-box;
+	background: linear-gradient(45deg, #ac8bef, #2ddbdc);
 }
-	/* 구글웹 폰트로 roboto와 orbitron 폰트를 연결합니다. 그다음전체 요소의 기본간격과목록
+/* 구글웹 폰트로 roboto와 orbitron 폰트를 연결합니다. 그다음전체 요소의 기본간격과목록
 태그의 꾸밈 효과등을없애서 CSS를초기화한뒤 .wrap에 너비와높이를각각 100%, 100vh로
 지정해 풀 스크린으로 만들고 배경색에 그러데이션 색상을 지정합니다. */
 
 /* 제목 */
 .wrap h1 {
-  font-weight: normal;
-  font-size: 24px;
-  font-family: "orbitron";
-  color: #fff;
-  letter-spacing: 1px; /* 'px' 단위와 '1' 사이에 공백이 있으면 안 됩니다 */
-  position: absolute; 
-  left: 50px; /* '50 px'에서 공백 제거 */
-  top: 70px;  /* '70 px'에서 공백 제거 */
+	font-weight: normal;
+	font-size: 24px;
+	font-family: 'orbitron';
+	color: #fff;
+	letter-spacing: 1px;
+	position: absolute;
+	left: 50px; /* '50 px'에서 공백 제거 */
+	top: 70px; /* '70 px'에서 공백 제거 */
 }
 .wrap h1 span {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 /* 자동 재생 버튼 */
 .wrap .auto {
-  position: absolute;
-  bottom: 60px;
-  left: 60px; /* '60 px'에서 공백 제거 */
-  z-index: 20;
+	position: absolute;
+	bottom: 60px;
+	left: 60px; /* '60 px'에서 공백 제거 */
+	z-index: 20;
 }
 .wrap .auto li {
-  float: left;
-  margin-right: 20px; 
-  cursor: pointer;
-  color: #fff;
-  font-size: 20px;
-  opacity: 0.9;
-  transition: all 0.5s;
+	float: left;
+	margin-right: 20px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 20px;
+	opacity: 0.9;
+	transition: all 0.5s;
 }
-.wrap .auto li:hover { /* 마우스 호버 시 진해지면서 1.4 배 확대 */
-  opacity: 1;
-  transform: scale(1.4); /* 'seale' -> 'scale', 오타 수정 */
+.wrap .auto li:hover {
+	/* 마우스 호버 시 진해지면서 1.4 배 확대 */
+	opacity: 1;
+	transform: scale(1.4); /* 'seale' -> 'scale', 오타 수정 */
 }
 
 /* hl 요소를선택해서 웹 폰트 orbitron을지정하고크기와색상을설정합니다. 
@@ -75,26 +77,26 @@ hl의 자식인 span 요소의 투명도를 0.8로설정해 약간투명하게 �
 
 /* 기본 슬라이드 프레임 */
 .swiper-wrapper {
-  width : 100%;
-  height : 100%;
-  }
+	width: 100%;
+	height: 100%;
+}
 .swiper-wrapper .swiper-slide {
-  width : 500px;
-  height : 500px;
-  position : relative;
-  top : 50%;
-  margin-top : -230px;
-  }
+	width: 500px;
+	height: 500px;
+	position: relative;
+	top: 50%;
+	margin-top: -230px;
+}
 .swiper-wrapper .swiper-slide .inner {
-  width : 100%;
-  height : 100%;
-  background : #fff;
-  padding : 30px;
-  box-sizing : border-box;
-  opacity: 0.4;
-  transition : 1s;
-  }
-  /* 
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	padding: 30px;
+	box-sizing: border-box;
+	opacity: 0.4;
+	transition: 1s;
+}
+/* 
   .wrap .swiper-wrapper의 너비와 높이 모두 100距김 지정하고, 
   각 슬라이드 패널로 사용할 .swiper-slide는 500px로 지정합니다. 
   그리고 위치는 세로 중앙에서 살짝 아래로 내려가도록 
@@ -106,137 +108,131 @@ hl의 자식인 span 요소의 투명도를 0.8로설정해 약간투명하게 �
   플러그인의 호출 구문을 확인하기 위해 다시 플러그인 사이트로 이동해서 [Get Started] 메뉴에 서 [Initialize Swiper] 아래 의 호출 구문을 복사합니 다.
   */
 
-
-  /* 좌우 버튼과 페이지네이션 스타일 변경하기 */
+/* 좌우 버튼과 페이지네이션 스타일 변경하기 */
 .wrap .swiper-button-prev {
-  left: auto;
-  right: 100px;
-  top: auto;
-  bottom: 50px;
-  filter: grayscale(100%) brightness(3); /*버튼 색을 흰색으로 변경*/
-  transform: scale(0.5);
+	left: auto; /*기존left값 초기화*/
+	right: 100px;
+	top: auto;
+	bottom: 50px;
+	filter: grayscale(100%) brightness(3); /*버튼 색을 흰색으로 변경*/
+	transform: scale(0.5);
 }
 
 .wrap .swiper-button-next {
-  left: auto;
-  right: 60px;
-  top: auto;
-  bottom: 50px;
-  filter: grayscale(100%) brightness(3); /*버튼 색을 흰색으로 변경*/
-  transform : scale(0.5);
+	left: auto; /*기존left값 초기화*/
+	right: 60px;
+	top: auto;
+	bottom: 50px;
+	filter: grayscale(100%) brightness(3); /*버튼 색을 흰색으로 변경*/
+	transform: scale(0.5);
 }
 
+/*페이지네이션*/
+.swiper-pagination-fraction {
+	bottom: auto; //기존 값 초기화
+	top: 50px;
+	left: auto; //기존 값 초기화
+	right: 50px;
+	width: auto; //기존 값 초기화
+	font-size: 16px;
+	font-family: 'orbitron';
+	letter-spacing: 1px;
+	color: #eee;
+}
 
+.swiper-pagination-fraction span:nth-of-type(1) {
+	font-size: 30px;
+	color: #fff;
+}
 
-
-    /*페이지네이션*/
-    .swiper-pagination-fraction {
-      bottom: auto; //기존 값 초기화
-      top: 50px;
-      left: auto; //기존 값 초기화
-      right: 50px;
-      width: auto; //기존 값 초기화
-      font-size: 16px;
-      font-family: "orbitron";
-      letter-spacing: 1px;
-      color: #eee;
-    }
-    
-    .swiper-pagination-fraction span:nth-of-type(1) {
-      font-size: 30px;
-      color: #fff;
-    }
-
-    .wrap .swiper-wrapper .swiper-slied-activ .inner { //가운데 패널
-      opacity: 1;
-      box-shadow: 0px 0px 50px rgba(255,255,255,0.8);
-      }
+.wrap .swiper-wrapper .swiper-slied-activ .inner {
+	/*가운데 패널*/
+	opacity: 1;
+	box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.8);
+}
 
 .wrap .swiper-wrapper .swiper-slide .inner::before,
 .wrap .swiper-wrapper .swiper-slide .inner::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  opacity: 0;
-  background: #fff;
+	/*좌우 패널*/
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	background: #fff;
 }
-
-
-  @keyframes ani {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    1% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.4);
-    }
-}
-
-
 
 .wrap .swiper-wrapper .swiper-slide-prev .inner,
 .wrap .swiper-wrapper .swiper-slide-next .inner {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
+@keyframes ani {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	1% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
 
 .wrap .swiper-wrapper .swiper-slide-active .inner::before {
-    animation: ani 1s ease 1;
+	animation: ani 1s ease 1;
 }
 
 .wrap .swiper-wrapper .swiper-slide-active .inner::after {
-    animation: ani 1s ease 0.3s 1;
+	animation: ani 1s ease 0.3s 1;
 }
 
-.wrap .swiper-wrapper .swiper-slide .inner con{
-  position: relative; 
-  /*.inner 안의 가상 요소인 : :before, : :after를 absolute로 배치했으므로 div.con 요소가 가
+.wrap .swiper-wrapper .swiper-slide .inner .con {
+	position: relative;
+	/*.inner 안의 가상 요소인 : :before, : :after를 absolute로 배치했으므로 div.con 요소가 가
   상 요소보다 위쪽으로 올라오도록 relative를 설정, z-index값을 10으로 높게 지정 */
-  z-index: 10;
+	z-index: 10;
 }
 /* 이후자식인 이미지는부모의 100%로너빗값을지정하고제목,본문과관련된 서식 스타
 일도 입력합니다. 이때 h2 요소에도 가상 요소 : :after를 만들어서 제목 아래에 얇은 밑줄을
 생성*/
-.swiper-wrapper .swiper-slide .inner .con img{
-  width: 100%;
+.swiper-wrapper .swiper-slide .inner .con img {
+	width: 100%;
 }
 
-.swiper-wrapper .swiper-slide .inner .con h2{
-font-weight: normal;
-font-size: 40px;
-font-family: "roboto";
-color: #111;
-margin-top: 15px;
-margin-bottom: 20px;
+.swiper-wrapper .swiper-slide .inner .con h2 {
+	font-weight: normal;
+	font-size: 40px;
+	font-family: 'roboto';
+	color: #111;
+	margin-top: 15px;
+	margin-bottom: 20px;
 }
 
 .wrap .swiper-wrapper .swiper-slide .inner .con h2 ::after {
-  content : "";
-  display : block;
-  width : 30px;
-  height : 1px;
-  background-color: #888;
-  margin-top : 15px;
-  transition : 1s 0.5s;
+	content: '';
+	display: block;
+	width: 30px;
+	height: 1px;
+	background-color: #888;
+	margin-top: 15px;
+	transition: 1s 0.5s;
 }
 
 .swiper-wrapper .swiper-slide-active .inner .con h2 ::after {
-  width : 100px;
-  }
+	width: 100px;
+}
 
 .swiper-wrapper .swiper-slide .inner .con p {
-    font-weight : normal;
-    font-size : 13px;
-    font-family : "arial";
-    line-height : 1.3;
-    color : #aaa;
-    letter-spacing : 1px;
-    }
+	font-weight: normal;
+	font-size: 13px;
+	font-family: 'arial';
+	line-height: 1.3;
+	color: #aaa;
+	letter-spacing: 1px;
+}

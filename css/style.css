@@ -129,20 +129,20 @@ hl의 자식인 span 요소의 투명도를 0.8로설정해 약간투명하게 �
 
 /*페이지네이션*/
 .swiper-pagination-fraction {
-	bottom: auto; //기존 값 초기화
-	top: 50px;
-	left: auto; //기존 값 초기화
-	right: 50px;
-	width: auto; //기존 값 초기화
+	bottom: auto; /*기존 값 초기화*/
+	top: 50px !important;
+	left: auto !important; /*기존 값 초기화*/
+	right: 50px !important;
+	width: auto !important; /*기존 값 초기화*/
 	font-size: 16px;
 	font-family: 'orbitron';
 	letter-spacing: 1px;
-	color: #eee;
+	color: #eee !important;
 }
 
 .swiper-pagination-fraction span:nth-of-type(1) {
 	font-size: 30px;
-	color: #fff;
+	color: #fff !important;
 }
 
 .wrap .swiper-wrapper .swiper-slied-activ .inner {
